@@ -1,0 +1,8 @@
+.env
+.venv/
+__pycache__/
+app/__pycache__/
+app/db/__pycache__/
+app/routers/__pycache__/
+app/statics/__pycache__/
+app/tokens/__pycache__/
