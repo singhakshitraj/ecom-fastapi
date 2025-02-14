@@ -13,6 +13,7 @@ def payment(order_id : str,total_sum :int) -> bool:
             ''',(order_id,total_sum)
         )
         payment_details = cursor.fetchone()
+        connection.commit()
         return payment_details.get('order_id')
     else:
         return False
