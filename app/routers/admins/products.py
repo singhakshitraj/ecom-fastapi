@@ -10,7 +10,6 @@ cursor = connection.cursor()
 
 product_router = APIRouter(
     prefix='/products',
-    tags=['Admin','Products']
 )
 
 @product_router.post('/add')

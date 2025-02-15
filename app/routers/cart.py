@@ -12,7 +12,7 @@ connection = get_db_connection()
 cursor = connection.cursor()
 
 @router.post('/add')
-def addItemToCart(item:AddItemInCart,username = Depends(get_user)):
+def add_item_to_cart(item:AddItemInCart,username = Depends(get_user)):
     cursor.execute(
         '''
             select available_items from product
@@ -69,7 +69,7 @@ def addItemToCart(item:AddItemInCart,username = Depends(get_user)):
     
     
 @router.post('/remove')
-def removeItemFromCart(item : DeleteItemFromCart , username = Depends(get_user)):
+def remove_item_from_cart(item : DeleteItemFromCart , username = Depends(get_user)):
     cursor.execute(
         '''
             delete from user_cart

@@ -9,7 +9,7 @@ router = APIRouter(
 connection = get_db_connection()
 cursor = connection.cursor()
 @router.get('/')
-def getAllProducts(limit:int = 20, offset:int = 0):
+def get_all_products(limit:int = 20, offset:int = 0):
     cursor.execute(
         '''
             select product.id,product.name,price,available_items,product_category.name category,description from product inner join product_category 

@@ -4,5 +4,5 @@ create table product(
     product_category_id bigserial,
     price double precision not null,
     available_items int not null default 0,
-    constraint product_category_fk foreign key (product_category) references product_category(id)
+    constraint product_category_fk foreign key (product_category_id) references product_category(id)
 )

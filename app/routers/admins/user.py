@@ -6,7 +6,6 @@ from ...statics.errors import error_as_dict
 
 router = APIRouter(
     prefix='/users',
-    tags=['Admin','Users']
 )
 
 connection = get_db_connection()
